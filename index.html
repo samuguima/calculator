@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+</head>
+<body>
+    <H2>calculator</H2>
+    <input type="text" id="vlrSoma1">
+    +
+    <input type="text" id="vlrSoma2">
+    =
+    <div id="resultSoma"></div>
+    
+    <button 
+        onclick="soma(document.getElementById('vlrSoma1').value,
+        document.getElementById('vlrSoma2').value)">
+        somar</button>
+
+<br>
+<br>
+    <input type="text" id="vlrSub1">
+    -
+    <input type="text" id="vlrSub2">
+    =
+    <div id="resultSub"></div>
+
+    <button 
+        onclick="sub(document.getElementById('vlrSub1').value,
+        document.getElementById('vlrSub2').value)">
+        subtrair</button>
+
+
+
+
+</body>
+</html>
+<script src="script.js"></script>
