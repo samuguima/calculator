@@ -9,5 +9,15 @@ function sub(a, b){
     document.getElementById("resultSub").innerHTML=valor;
 }
 
+function mult(a, b){
+    valor= parseInt(a) * parseInt(b);
+    document.getElementById("resultMult").innerHTML=valor;
+}
+
+function div(a, b){
+    valor= parseInt(a) / parseInt(b);
+    document.getElementById("resultDiv").innerHTML=valor;
+}
+
 texto = "Bem vindo ao Calculator";
 alert(texto);
