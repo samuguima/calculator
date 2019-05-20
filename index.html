@@ -7,61 +7,93 @@
     <title>calculator</title>
 </head>
 <body>
-    <h1>Calculator</h1>
-        <input type="text" id="vlrSoma1">
-        +
-        <input type="text" id="vlrSoma2">
-        =
-        <div id="resultSoma"></div>
+    <div class="container">
+        <h1>Calculator</h1>
+
+
+        <div class="row">
+            
+            <div class="col-md-2">
+                <input type="text" id="vlrSoma1" class="form-control">
+            </div>
+
+            <div class="col-md-1 text-center">
+                +
+            </div>
+
+            <div class="col-md-2">
+                <input type="text" id="vlrSoma2" class="form-control">
+            </div>
+
+            <div class="col-md-1">
+                =
+            </div>
+
+            <div class="col-md-2">
+                <div id="resultSoma"></div>
+            </div>
+            
+            <div class="col-md-2">
+                <button  class="btn btn-success"
+                onclick="soma(document.getElementById('vlrSoma1').value,
+                document.getElementById('vlrSoma2').value)">
+                somar</button>
+            </div>
+
+        </div>
+            
+            
         
-        <button 
-            onclick="soma(document.getElementById('vlrSoma1').value,
-            document.getElementById('vlrSoma2').value)">
-            somar</button>
-
-    <br>
-    <br>
+            
         
-        <input type="text" id="vlrSub1">
-        -
-        <input type="text" id="vlrSub2">
-        =
-        <div id="resultSub"></div>
-
-        <button 
-            onclick="sub(document.getElementById('vlrSub1').value,
-            document.getElementById('vlrSub2').value)">
-            subtrair</button>
-
-    <br>
-    <br>
+            
         
-        <input type="text" id="vlrMult1">
-        *
-        <input type="text" id="vlrMult2">
-        =
-        <div id="resultMult"></div>
 
-        <button 
-            onclick="mult(document.getElementById('vlrMult1').value,
-            document.getElementById('vlrMult2').value)">
-            multiplicar</button>
+        <br>
+        <br>
+            
+            <input type="text" id="vlrSub1">
+            -
+            <input type="text" id="vlrSub2">
+            =
+            <div id="resultSub"></div>
 
-    <br>
-    <br>
-        
-        <input type="text" id="vlrDiv1">
-        /
-        <input type="text" id="vlrDiv2">
-        =
-        <div id="resultDiv"></div>
+            <button 
+                onclick="sub(document.getElementById('vlrSub1').value,
+                document.getElementById('vlrSub2').value)">
+                subtrair</button>
 
-        <button 
-            onclick="div(document.getElementById('vlrDiv1').value,
-            document.getElementById('vlrDiv2').value)">
-            dividir</button>
+        <br>
+        <br>
+            
+            <input type="text" id="vlrMult1">
+            *
+            <input type="text" id="vlrMult2">
+            =
+            <div id="resultMult"></div>
+
+            <button 
+                onclick="mult(document.getElementById('vlrMult1').value,
+                document.getElementById('vlrMult2').value)">
+                multiplicar</button>
+
+        <br>
+        <br>
+            
+            <input type="text" id="vlrDiv1">
+            /
+            <input type="text" id="vlrDiv2">
+            =
+            <div id="resultDiv"></div>
+
+            <button 
+                onclick="div(document.getElementById('vlrDiv1').value,
+                document.getElementById('vlrDiv2').value)">
+                dividir</button>
+    </div>
 
 
 </body>
 </html>
 <script src="script.js"></script>
+<link rel="stylesheet" href="bootstrap.css">
