@@ -1,22 +1,22 @@
 
 function soma(a, b){
     valor= parseInt(a) + parseInt(b);
-    document.getElementById("resultSoma").innerHTML=valor;
+    document.getElementById("resultNumero").innerHTML=valor;
 }
 
 function sub(a, b){
     valor= parseInt(a) - parseInt(b);
-    document.getElementById("resultSub").innerHTML=valor;
+    document.getElementById("resultNumero").innerHTML=valor;
 }
 
 function mult(a, b){
     valor= parseInt(a) * parseInt(b);
-    document.getElementById("resultMult").innerHTML=valor;
+    document.getElementById("resultNumero").innerHTML=valor;
 }
 
 function div(a, b){
     valor= parseInt(a) / parseInt(b);
-    document.getElementById("resultDiv").innerHTML=valor;
+    document.getElementById("resultNumero").innerHTML=valor;
 }
 
 texto = "Bem vindo ao Calculator";
