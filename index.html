@@ -22,15 +22,17 @@
         <div class="row">
             
             <div class="col-md-2">
-                <input type="text" id="vlrNumero1" class="form-control">   
-                <input type="text" id="vlrNumero2" class="form-control mt-3">    
+                <input type="text" id="vlrNumero1" class="form-control text-right">   
+                <input type="text" id="vlrNumero2" class="form-control mt-3 text-right">    
             </div>
 
-            <div class="col-md-2 text-center font-weight-light resultado" display:="" flex;="" align-items:="" center;="" justify-content:="" center="" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        "><span id="resultNumero"></span>
+            <div class="col-md-10 font-weight-light resultado" 
+                style="
+                    display: flex;
+                    align-items: center;
+                    "
+            id="resultNumero">
+
             </div>
         </div>
       
@@ -38,32 +40,44 @@
             
             <div class="col-md-1">
                 <button  class="btn btn-success"
-                onclick="soma(document.getElementById('vlrNumero1').value,
-                document.getElementById('vlrNumero2').value)">
+                onclick="soma($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
                 +</button>
             </div>
         
             <div class="col-md-1">
                 <button  class="btn btn-success"
-                onclick="sub(document.getElementById('vlrNumero1').value,
-                document.getElementById('vlrNumero2').value)">
+                onclick="sub($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
                 -</button>
             </div>
+
+            
+            <div class="form-group">
+                <label for="selecionarMoeda">Currency</label>
+                <select class="form-control" id="selecionarMoeda" onchange="trocaMoeda()">
+                  <option>-</option>
+                  <option>$</option>
+                  <option>€</option>
+                  <option>¥</option>
+                  <option>R$</option>
+                </select>
+              </div>
         </div>
         
         <div class="row mt-5">
 
             <div class="col-md-1">
                 <button  class="btn btn-success"
-                onclick="mult(document.getElementById('vlrNumero1').value,
-                document.getElementById('vlrNumero2').value)">
+                onclick="mult($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
                 x</button>
             </div>
 
             <div class="col-md-1">
                 <button  class="btn btn-success" 
-                onclick="div(document.getElementById('vlrNumero1').value,
-                document.getElementById('vlrNumero2').value)">
+                onclick="div($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
                 /</button>
             </div>
         </div>    
@@ -73,6 +87,10 @@
 
 </body>
 </html>
+<script src="jquery-3.4.1.js"></script>
 <script src="script.js"></script>
+<script src="jquery.maskMoney.js"></script>
+<script src="popper.js"></script>
+<script src="bootstrap.js"></script>
 <link rel="stylesheet" href="bootstrap.css">
 <link rel="stylesheet" href="calculator.css">
