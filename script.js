@@ -1,5 +1,48 @@
 function trocaMoeda(){
 
+    if ( $("#selecionarMoeda").val() == "R$" ){
+
+        $('#vlrNumero1').maskMoney({
+            thousands: '.',
+            decimal: ',',
+            allowZero:true,
+            prefix: 'R$'
+        });
+        
+        $('#vlrNumero2').maskMoney({
+            thousands: '.',
+            decimal: ',',
+            allowZero:true,
+            prefix: 'R$'
+        });
+        
+        $('#resultNumero').maskMoney({
+            thousands: '.',
+            decimal: ',',
+            allowZero:true,
+            prefix: 'R$'
+        });
+    
+    }
+
+    if ( $("#selecionarMoeda").val() == "¥" ){
+
+        $('#vlrNumero1').maskMoney({
+            thousands: '',
+            decimal: '',
+            allowZero:true,
+            prefix: '¥'
+        });
+        
+        $('#vlrNumero2').maskMoney({
+            thousands: '',
+            decimal: '',
+            allowZero:true,
+            prefix: '¥'
+        });
+
+    }
+
     if ( $("#selecionarMoeda").val() == "$" ){
 
         $('#vlrNumero1').maskMoney({
@@ -18,10 +61,7 @@ function trocaMoeda(){
 
     }
 
-    
-}
 
-function trocaMoeda(){
 
     if ( $("#selecionarMoeda").val() == "€" ){
 
@@ -44,47 +84,6 @@ function trocaMoeda(){
     
 }
 
-function trocaMoeda(){
-
-    if ( $("#selecionarMoeda").val() == "R$" ){
-
-        $('#vlrNumero1').maskMoney({
-            thousands: '.',
-            decimal: ',',
-            allowZero:true,
-            prefix: 'R$'
-        });
-        
-        $('#vlrNumero2').maskMoney({
-            thousands: '.',
-            decimal: ',',
-            allowZero:true,
-            prefix: 'R$'
-        });
-
-    }
-
-    
-}
-
-function trocaMoeda(){
-
-    if ( $("#selecionarMoeda").val() == "¥" ){
-
-        $('#vlrNumero1').maskMoney({
-            allowZero:true,
-            prefix: '¥'
-        });
-        
-        $('#vlrNumero2').maskMoney({
-            allowZero:true,
-            prefix: '¥'
-        });
-
-    }
-
-
-}
 
 
 function soma(a, b){
