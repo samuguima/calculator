@@ -110,5 +110,5 @@ function div(a, b){
     document.getElementById("resultNumero").innerHTML=valor;
 }
 
-texto = "Bem vindo ao Calculator";
-alert(texto);
+
+

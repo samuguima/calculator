@@ -8,12 +8,25 @@
 </head>
 
 <header>
+         
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
         <a class="navbar-brand" href="#">
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+            <img src="C:\Users\samue\Downloads\calculator1.png" width="30" height="30" alt="">
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 
                 <li class="nav-item">
@@ -29,8 +42,7 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Items</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Items</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Calculator</a>
                         <a class="dropdown-item" href="#">-</a>
@@ -40,75 +52,74 @@
             
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">Log In</button>
-            </form>
+                <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">
+                    <img src="C:\Users\samue\Downloads\Prancheta 1.png" width="15" height="15" alt="">
+                </button>
+            </form>    
+            
+            <!-- Button trigger modal -->    
+            <button class="btn btn-primary my-2 my-sm-2" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
         </div>
     </nav>
 </header>
 
 <body>
-    <div class="container container-fluid">
-        
-    <br>
-    <br>
-    <br>
-
-        <h2>Calculator</h2>
-        
-    <br>
-    <br>
-
-        <div class="row">
+      
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
             
-            <div class="form-group col-md-1">
-                <label for="selecionarMoeda">Currency</label>
-                <select class="form-control" id="selecionarMoeda" onchange="trocaMoeda()">
-                  <option>-</option>
-                  <option>$</option>
-                  <option>€</option>
-                  <option>¥</option>
-                  <option>R$</option>
-                </select>
-            </div>
-
-            <div class="col-md-2">
-                <input type="text" id="vlrNumero1" class="form-control text-right">   
-                <input type="text" id="vlrNumero2" class="form-control mt-3 text-right">    
-            </div>
-
-            <div class="col-md-2 font-weight-light resultado" 
-                style="display: flex; align-items: center;" id="resultNumero">
+            <div class="main">
+                <h3 class="">Login, or <a href="#">Sign Up</a></h3>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
+                    </div>
+                </div>
+                <div class="login-or">
+                    <hr class="hr-or">
+                </div>
+            
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputUsernameEmail">Username or email</label>
+                        <input type="text" class="form-control" id="inputUsernameEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox">Remember me</label>
+                        <a class="text-right" href="#">Forgot password?</a>
+                    </div>
+                </form>     
+            
             </div>
         </div>
-
-        <div class="row mt-5">
-            
-            <div class="btn-group btn-group-toggle col-md-3" data-toggle="buttons">
-                <label class="btn btn-dark" onclick="soma($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
-                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
-                    <input type="radio" name="options" id="option1" autocomplete="off">
-                    +</label>
-                <label class="btn btn-light" onclick="sub($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
-                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> -
-                </label>
-                <label class="btn btn-dark" onclick="mult($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
-                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> x
-                </label>
-                <label class="btn btn-light" onclick="div($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
-                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
-                    <input type="radio" name="options" id="option4" autocomplete="off"> /
-                </label>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Login</button>
             </div>
-        </div>    
-
+        
+        </div>
+    </div>
     </div>
 
-
 </body>
+
 </html>
+
 <script src="jquery-3.4.1.js"></script>
 <script src="script.js"></script>
 <script src="jquery.maskMoney.js"></script>

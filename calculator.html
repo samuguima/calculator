@@ -1,0 +1,58 @@
+
+<div class="container container-fluid">
+
+    <br>
+    <br>
+    <br>
+
+        <h2>Calculator</h2>
+        
+    <br>
+    <br>
+
+        <div class="row">
+            
+            <div class="form-group col-md-1">
+                <label for="selecionarMoeda">Currency</label>
+                <select class="form-control" id="selecionarMoeda" onchange="trocaMoeda()">
+                <option>-</option>
+                <option>$</option>
+                <option>€</option>
+                <option>¥</option>
+                <option>R$</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <input type="text" id="vlrNumero1" class="form-control text-right">   
+                <input type="text" id="vlrNumero2" class="form-control mt-3 text-right">    
+            </div>
+
+            <div class="col-md-2 font-weight-light resultado" 
+                style="display: flex; align-items: center;" id="resultNumero">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            
+            <div class="btn-group btn-group-toggle col-md-3" data-toggle="buttons">
+                <label class="btn btn-dark" onclick="soma($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
+                    <input type="radio" name="options" id="option1" autocomplete="off">
+                    +</label>
+                <label class="btn btn-light" onclick="sub($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> -
+                </label>
+                <label class="btn btn-dark" onclick="mult($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> x
+                </label>
+                <label class="btn btn-light" onclick="div($(`#vlrNumero1`).maskMoney(`unmasked`)[0],
+                $(`#vlrNumero2`).maskMoney(`unmasked`)[0])">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> /
+                </label>
+            </div>
+        </div>    
+
+    </div>
